@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" href="https://i.ibb.co/Kpv2dmkr/20260124-074629.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALAIN Pronostics Sportifs - Expertise Football</title>
+    <meta name="description" content="Découvrez les pronostics football d'ALAIN. Analyse personnelle et choix experts pour maximiser vos gains sur les paris sportifs.">
+    
+    <meta name="monetag" content="bb12564a8e60bf8461f87afbc048e64c">
+    
+    <script src="https://quge5.com/88/tag.min.js" data-zone="189752" async data-cfasync="false"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" media="all">
+    <style>
+        /* BASE & TYPOGRAPHIE */
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0d111c; 
+            color: #ffffff;
+            margin: 0;
+            padding: 15px 5px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color: #0d111c;
+        }
+
+        .app-container {
+            background-color: #1a202c; 
+            width: 100%;
+            max-width: 350px; 
+            border-radius: 15px; 
+            padding: 20px 10px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+            overflow: hidden;
+            margin-bottom: 25px; 
+            position: relative;
+            z-index: 1;
+        }
+
+        /* --- HEADER --- */
+        .app-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .main-title {
+            font-size: 2em; 
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        .main-header-logo {
+            width: 110px; 
+            height: 110px; 
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #3f51b5; /* COULEUR MODIFIÉE */
+            margin-bottom: 8px;
+            box-shadow: 0 0 0 6px rgba(63, 81, 181, 0.2); /* COULEUR MODIFIÉE */
+            transition: transform 0.3s ease;
+        }
+        .main-header-logo:hover {
+             transform: scale(1.05) rotate(3deg);
+        }
+
+        /* --- ICÔNES SOCIALES --- */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px; 
+            margin-top: 8px;
+            margin-bottom: 12px; 
+        }
+
+        .social-icons a {
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+        
+        .social-icons img {
+            width: 35px; 
+            height: 35px;
+            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.3)); 
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.15);
+            opacity: 0.9;
+        }
+        /* --- FIN CSS ICÔNES SOCIALES --- */
+
+        .alain-intro {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px; 
+            font-size: 0.85em; 
+            color: #b0b8c4;
+            padding: 0 5px; 
+            line-height: 1.4;
+        }
+
+        /* --- BUTTONS (TIPS & VIP) --- */
+        .tips-selector, .vip-selector {
+            text-align: center;
+            padding: 10px 10px; 
+            font-weight: 700;
+            border-radius: 25px; 
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3); 
+            width: 100%;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-decoration: none; 
+            display: block; 
+        }
+        
+        .vip-selector {
+            background-color: #3f51b5; /* COULEUR MODIFIÉE (Bleu Royal) */
+            color: #ffffff;
+            font-size: 0.95em; 
+            margin-bottom: 15px; 
+        }
+        .vip-selector:hover {
+            background-color: #5c6bc0; /* Éclaircissement du bleu */
+            transform: translateY(-2px);
+        }
+
+        .tips-selector {
+            background-color: #03a9f4; /* COULEUR MODIFIÉE (Bleu Ciel) */
+            color: #1a202c;
+            font-size: 0.9em; 
+            margin-bottom: 20px; 
+        }
+        .tips-selector:hover {
+            background-color: #4fc3f7; /* Éclaircissement du bleu ciel */
+            transform: translateY(-2px);
+        }
+
+
+        .section-title {
+            background: linear-gradient(90deg, #1a202c, #3f51b5); /* COULEUR MODIFIÉE */
+            color: #ffffff;
+            text-align: center;
+            padding: 10px; 
+            border-radius: 6px; 
+            font-size: 1.1em; 
+            font-weight: 700;
+            margin-top: 10px; 
+            margin-bottom: 15px; 
+        }
+
+        /* --- FILTRE/TRI CONTRÔLES --- */
+        .filter-controls {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        #league-filter, #sort-control {
+            padding: 8px 12px;
+            border-radius: 8px;
+            background-color: #263248;
+            color: #ffffff;
+            border: 1px solid #3f51b5;
+            font-size: 0.9em;
+            width: 95%;
+            max-width: 330px;
+            appearance: none; /* Cache le style natif du select */
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M10%203.5L6%207.5L2%203.5L1%204.5L6%209.5L11%204.5L10%203.5Z%22%2F%3E%3C%2Fsvg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            cursor: pointer;
+            margin-top: 10px; /* Espace entre les deux contrôles */
+        }
+        
+        .filter-controls label {
+             font-size: 0.8em; 
+             color: #b0b8c4; 
+             display: block; 
+             margin-bottom: 5px;
+        }
+
+        /* --- FIN FILTRE/TRI CONTRÔLES --- */
+
+        /* --- MATCH CARD (PREDICTIONS) --- */
+        .match-card {
+            background-color: #263248;
+            border-radius: 10px; 
+            padding: 12px; 
+            margin-bottom: 12px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+            border-left: 4px solid #3f51b5; /* COULEUR MODIFIÉE */
+        }
+        
+        /* NOUVEAU CSS POUR LA CARTE DE MATCH AVEC FORTE CONFIANCE */
+        .match-card.high-confidence {
+            border-color: #f44336; /* Rouge vif pour attirer l'attention */
+            box-shadow: 0 4px 15px rgba(244, 67, 54, 0.4);
+            animation: pulseBorder 1.5s infinite alternate;
+        }
+
+        .match-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        @keyframes pulseBorder {
+            from {
+                border-color: #f44336;
+                transform: scale(1);
+            }
+            to {
+                border-color: #ff9800;
+                transform: scale(1.01);
+            }
+        }
+
+        .match-time {
+            font-size: 0.75em;
+            color: #03a9f4; /* Bleu ciel pour le contraste */
+            font-weight: 600;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .teams-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px; 
+        }
+
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            text-align: center;
+        }
+
+        .team-logo-container {
+            width: 45px; 
+            height: 45px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5px; 
+            border-radius: 50%;
+            background-color: transparent; 
+        }
+
+        .team-logo {
+            width: 100%; 
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .team-name {
+            font-weight: 600;
+            font-size: 0.9em; 
+            line-height: 1.2;
+            color: #ffffff;
+        }
+        
+        .vs-text {
+            color: #b0b8c4;
+            font-weight: 600;
+            font-size: 1em; 
+            padding: 10px 8px 0 8px; 
+        }
+
+        /* --- NOUVEAU CSS POUR MASQUER LA PRÉDICTION (STRUCTURE) --- */
+        .prediction-hidden {
+            display: none; 
+            flex-direction: column; 
+            width: 100%;
+            padding-top: 10px;
+            margin-top: 5px;
+            border-top: 1px dashed #3f51b5; /* Séparateur */
+        }
+        
+        /* Conteneur principal de la prédiction révélée */
+        .prediction-info {
+            display: flex;
+            flex-direction: column; /* Organise le contenu en colonne */
+            align-items: center;
+            width: 100%;
+        }
+        
+        /* Conteneur pour le TAG principal (Pronostic) */
+        .prediction-content-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 10px; /* Espace après le tag principal */
+        }
+
+        .prediction-tag {
+            background-color: #00a878; /* COULEUR MODIFIÉE (Vert Sarcelle) */
+            color: #ffffff;
+            padding: 8px 15px; /* Augmenté */
+            border-radius: 20px; /* Plus arrondi */
+            font-weight: 700;
+            font-size: 1.1em; /* Plus grand */
+            box-shadow: 0 3px 6px rgba(0, 168, 120, 0.4);
+            text-transform: uppercase;
+        }
+        
+        /* Conteneur pour la Cote et la Confiance (alignés) */
+        .prediction-stats-footer {
+            display: flex;
+            justify-content: space-around; /* Espacement autour des badges */
+            width: 90%; 
+        }
+        
+        /* ANIMATION DU BOUTON (Pulse) */
+        @keyframes pulseButton {
+            0% {
+                box-shadow: 0 0 0 0 rgba(3, 169, 244, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(3, 169, 244, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(3, 169, 244, 0);
+            }
+        }
+        
+        /* MODIFICATION POUR CENTRER LE BOUTON */
+        .prediction-reveal-button {
+            background-color: #03a9f4; /* Bleu Ciel */
+            color: #1a202c;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9em;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            margin: 10px auto 0 auto; /* MARGE AUTO POUR CENTRER */
+            display: block; /* NÉCESSAIRE POUR MARGE AUTO */
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            
+            /* Application de l'animation */
+            animation: pulseButton 2s infinite; 
+        }
+        .prediction-reveal-button:hover {
+             background-color: #4fc3f7;
+             transform: translateY(-1px);
+             animation: none; /* Arrêter l'animation au survol */
+        }
+
+        .stats {
+            text-align: right;
+        }
+
+        .odd-badge {
+            background-color: #3f51b5; /* Bleu Royal/Indigo */
+            color: #ffffff;
+            padding: 6px 10px; 
+            border-radius: 15px; 
+            font-weight: 700;
+            font-size: 0.9em; 
+            display: inline-block;
+            margin: 0 5px; /* Ajout d'espace */
+        }
+        
+        .percentage-badge {
+            background-color: #03a9f4; 
+            color: #ffffff;
+            padding: 6px 10px; /* Taille cohérente */
+            border-radius: 15px; 
+            font-weight: 700; /* Poids de police cohérent */
+            font-size: 0.9em; 
+            display: inline-block;
+            margin: 0 5px; /* Ajout d'espace */
+        }
+
+
+        .league-name {
+            font-size: 0.75em; 
+            color: #b0b8c4;
+        }
+        
+        /* --- SECTION : TIPS GRATUITS --- */
+        .free-tips-content {
+            background-color: #263248;
+            border: 1px solid #3f51b5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            /* Le display est géré par JS */
+        }
+        .free-tips-content h3 {
+            color: #03a9f4;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .free-tips-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        .free-tips-content li {
+            background-color: #1a202c;
+            padding: 8px;
+            margin-bottom: 6px;
+            border-left: 3px solid #00a878;
+            font-size: 0.9em;
+            color: #e0e0e0;
+        }
+        /* --- FIN SECTION TIPS GRATUITS --- */
+
+        /* --- DESCRIPTION SECTION --- */
+        .description-container {
+            background-color: #1a202c;
+            padding: 20px; 
+            border-radius: 10px;
+            max-width: 350px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 25px; 
+        }
+        .description-container h2 {
+            color: #3f51b5; /* COULEUR MODIFIÉE */
+            font-size: 1.4em; 
+            margin-top: 0;
+            text-align: center;
+            border-bottom: 2px solid #3f51b5;
+            padding-bottom: 8px; 
+            margin-bottom: 15px; 
+        }
+        .description-container h3 {
+            color: #03a9f4; 
+            font-size: 1.1em; 
+            margin-top: 20px; 
+            margin-bottom: 6px; 
+        }
+        .description-container p {
+            color: #e0e0e0;
+            line-height: 1.6; 
+            font-size: 0.9em; 
+            margin-bottom: 12px; 
+        }
+        
+        /* --- FOOTER CSS --- */
+        .app-footer {
+            width: 100%;
+            max-width: 350px; 
+            text-align: center;
+            padding: 20px 10px 10px 10px; 
+            margin-top: 20px; 
+            color: #8892a0;
+            font-size: 0.7em; 
+            line-height: 1.6;
+            border-top: 1px solid #2a428c;
+        }
+        .app-footer a {
+            color: #3f51b5; /* COULEUR MODIFIÉE */
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .app-footer a:hover {
+            color: #5c6bc0; /* COULEUR MODIFIÉE */
+            text-decoration: underline;
+        }
+        /* --- FIN FOOTER CSS --- */
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1 class="main-title">ALAIN Pronostics</h1>
+            
+            <img src="https://i.ibb.co/0V8HCw3w/20251130-120519.jpg" alt="Logo Alain Pronostics" class="main-header-logo" width="110" height="110">
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/wizz_alain?igsh=eTh5bDh2Nmx6Zmtt" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
+                    <img src="https://i.ibb.co/nN5pJmkZ/instagram-1.png" alt="Logo Instagram" title="Instagram" width="35" height="35">
+                </a>
+                <a href="https://otieu.com/4/10252811" target="_blank" aria-label="Telegram" rel="noopener noreferrer">
+                    <img src="https://i.ibb.co/27hj7jjZ/telegramme-1.png" alt="Logo Telegram" title="Telegram" width="35" height="35">
+                </a>
+                <a href="https://wa.link/n8v02y" target="_blank" aria-label="WhatsApp" rel="noopener noreferrer">
+                    <img src="https://i.ibb.co/gZCzDDSF/whatsapp-1.png" alt="Logo WhatsApp" title="WhatsApp" width="35" height="35">
+                </a>
+            </div>
+            
+            <p class="alain-intro">
+                Bienvenue ! Je suis Alain, votre pronostiqueur passionné. Sur ce site, je partage mes prédictions et analyses approfondies pour vous aider à prendre les meilleures décisions de pari.
+            </p>
+
+            <a href="https://otieu.com/4/10252809" target="_blank" class="vip-selector" rel="noopener noreferrer">
+                GAGNER DE L'ARGENT 
+            </a>
+            
+            <a href="#" class="tips-selector" role="button" aria-expanded="false" aria-controls="free-tips-content" onclick="toggleFreeTips(event)">
+                CONSEILS GRATUITS DU JOUR
+            </a>
+        </header>
+        
+        <div class="free-tips-content" id="free-tips-content" style="display: none;">
+            <h3>⭐ Le prono bonus du jour ⭐ </h3>
+            <ul>
+                <li>**Match :** Liverpool vs Brighton (Premier League)</li>
+                <li>**Pronostic :** Buteur Hugo Ekitike</li>
+                <li>**Cote approximative :** 2.27</li>
+                <li>**Confiance :** Modérée</li>
+            </ul>
+        </div>
+        
+        <div class="section-title">Analyse du Jour</div>
+        
+        <div class="filter-controls">
+            <label for="league-filter">Filtrer par Ligue :</label>
+            <select id="league-filter" onchange="filterMatches()">
+                <option value="all">Toutes les Ligues</option>
+                </select>
+
+            <label for="sort-control" style="margin-top: 15px;">Trier par :</label>
+            <select id="sort-control" onchange="sortMatches()">
+                <option value="default">Ordre d'apparition</option>
+                <option value="confidence_desc">Confiance (Plus Haut)</option>
+                <option value="odd_asc">Cote (Plus Petite)</option>
+            </select>
+        </div>
+        
+        <main>
+            
+            <section class="today-section" id="match-list">
+                
+                <div class="match-card" data-league="Premier League" data-confidence="70.00" data-odd="1.58">
+                    <div class="match-card-header">
+                        <div class="league-name">Premier League</div>
+                        </div>
+                    <div class="match-time">📅 24 janvier 2026 (Heure à confirmer)</div>
+                    <div class="teams-row">
+                        <div class="team">
+                            <div class="team-logo-container">
+                                <img src="https://i.ibb.co/FLPfNTYR/alba-img-6972a05270cab.png" alt="Logo Fulham" class="team-logo" width="45" height="45">
+                            </div>
+                            <div class="team-name">Fulham</div>
+                        </div>
+                        <div class="vs-text">️VS</div>
+                        <div class="team">
+                            <div class="team-logo-container">
+                                <img src="https://i.ibb.co/5hqYtG7L/alba-img-6972a05471644.png" alt="Logo Brighton" class="team-logo" width="45" height="45">
+                            </div>
+                            <div class="team-name">Brighton</div>
+                        </div>
+                    </div>
+                    <button class="prediction-reveal-button" onclick="showPrediction(this)">Cliquer pour voir le Pronostic</button>
+                    <div class="prediction-hidden">
+                        <div class="prediction-info">
+                            <div class="prediction-content-main">
+                                <div class="prediction-tag">Les 2 marquent (Oui)</div>
+                            </div>
+                            <div class="prediction-stats-footer">
+                                <div class="odd-badge">Cote : 1.58</div>
+                                <div class="percentage-badge">Confiance : 70.00 %</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="match-card high-confidence" data-league="Premier League" data-confidence="85.00" data-odd="1.302">
+                    <div class="match-card-header">
+                        <div class="league-name">Premier League</div>
+                        </div>
+                    <div class="match-time">📅 24 janvier 2026 - 17:30</div>
+                    <div class="teams-row">
+                        <div class="team">
+                            <div class="team-logo-container">
+                                <img src="https://i.ibb.co/B5XrTThL/alba-img-6972a02ca605f.png" alt="Logo Bournemouth" class="team-logo" width="45" height="45">
+                            </div>
+                            <div class="team-name">Bournemouth</div>
+                        </div>
+                        <div class="vs-text">️VS</div>
+                        <div class="team">
+                            <div class="team-logo-container">
+                                <img src="https://i.ibb.co/bMKM8xwx/alba-img-6972a02f1056c.png" alt="Logo Liverpool" class="team-logo" width="45" height="45">
+                            </div>
+                            <div class="team-name">Liverpool</div>
+                        </div>
+                    </div>
+                    <button class="prediction-reveal-button" onclick="showPrediction(this)">Cliquer pour voir le Pronostic</button>
+                    <div class="prediction-hidden">
+                        <div class="prediction-info">
+                            <div class="prediction-content-main">
+                                <div class="prediction-tag">Double Chance 2X</div>
+                            </div>
+                            <div class="prediction-stats-footer">
+                                <div class="odd-badge">Cote : 1.302</div>
+                                <div class="percentage-badge">Confiance : 85.00 %</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="match-card high-confidence" data-league="La Liga" data-confidence="82.00" data-odd="1.334">
+                    <div class="match-card-header">
+                        <div class="league-name">La Liga</div>
+                        </div>
+                    <div class="match-time">📅 24 janvier 2026 - 20:00</div>
+                    <div class="teams-row">
+                        <div class="team">
+                            <div class="team-logo-container">
+                                <img src="https://i.ibb.co/JJ1K13f/alba-img-69729f5c24add.png" alt="Logo Villarreal" class="team-logo" width="45" height="45">
+                            </div>
+                            <div class="team-name">Villarreal</div>
+                        </div>
+                        <div class="vs-text">️VS</div>
+                        <div class="team">
+                            <div class="team-logo-container">
+                                <img src="https://i.ibb.co/Ldy1yWWN/alba-img-69729f5c2c9a5.png" alt="Logo Real Madrid" class="team-logo" width="45" height="45">
+                            </div>
+                            <div class="team-name">Real Madrid</div>
+                        </div>
+                    </div>
+                    <button class="prediction-reveal-button" onclick="showPrediction(this)">Cliquer pour voir le Pronostic</button>
+                    <div class="prediction-hidden">
+                        <div class="prediction-info">
+                            <div class="prediction-content-main">
+                                <div class="prediction-tag">Double Chance 2X</div>
+                            </div>
+                            <div class="prediction-stats-footer">
+                                <div class="odd-badge">Cote : 1.334</div>
+                                <div class="percentage-badge">Confiance : 82.00 %</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="match-card high-confidence" data-league="Ligue 1" data-confidence="82.00" data-odd="1.332">
+                    <div class="match-card-header">
+                        <div class="league-name">Ligue 1</div>
+                        </div>
+                    <div class="match-time">📅 24 janvier 2026 - 20:05</div>
+                    <div class="teams-row">
+                        <div class="team">
+                            <div class="team-logo-container">
+                                <img src="https://i.ibb.co/hRJ2XQHB/alba-img-69729f6fd77af.png" alt="Logo Marseille" class="team-logo" width="45" height="45">
+                            </div>
+                            <div class="team-name">Olympique de Marseille</div>
+                        </div>
+                        <div class="vs-text">VS</div>
+                        <div class="team">
+                            <div class="team-logo-container">
+                                <img src="https://i.ibb.co/LzTvsLbc/alba-img-69729f7031179.png" alt="Logo Lens" class="team-logo" width="45" height="45">
+                            </div>
+                            <div class="team-name">RC Lens</div>
+                        </div>
+                    </div>
+                    <button class="prediction-reveal-button" onclick="showPrediction(this)">Cliquer pour voir le Pronostic</button>
+                    <div class="prediction-hidden">
+                        <div class="prediction-info">
+                            <div class="prediction-content-main">
+                                <div class="prediction-tag">Double Chance 1X</div>
+                            </div>
+                            <div class="prediction-stats-footer">
+                                <div class="odd-badge">Cote : 1.332</div>
+                                <div class="percentage-badge">Confiance : 82.00 %</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+        </main>
+
+    </div>
+
+    <div class="description-container">
+        <h2>L'Avantage Alain : Votre Expertise au Service de Vos Paris </h2>
+        
+        <h3>1. Analyse Expert et Transparente</h3>
+        <p>
+            ALAIN Pronostics n'est pas seulement un site de prédictions ; c'est un engagement envers la performance et la transparence. Chaque pronostic est le résultat de mon **analyse personnelle approfondie** et de ma passion pour le sport. Mon expertise s'étend sur les plus grandes ligues de football, garantissant des choix informés et méticuleux.
+        </p>
+
+        <h3>2. Un Savoir-Faire Éprouvé</h3>
+        <p>
+            Mon système d'analyse repose sur une méthodologie rigoureuse, prenant en compte les statistiques des équipes, les dynamiques de jeu et les conditions de match. Ce savoir-faire me permet d'identifier des opportunités et des valeurs de cote que la plupart des parieurs pourraient manquer, vous offrant un avantage concurrentiel unique.
+        </p>
+        
+        <h3>3. Recevez les Meilleurs Pronos Avant Tout le Monde</h3>
+        <p>
+            En vous appuyant sur l'approche d'ALAIN, vous accédez à des prédictions anticipées. Mon objectif est simple : vous permettre de placer vos paris lorsque les cotes sont les plus élevées, maximisant ainsi le potentiel de vos gains. Ne suivez plus, devancez le marché grâce à une vision claire et expérimentée.
+        </p>
+        
+    </div>
+    
+    <footer class="app-footer">
+        <p>&copy; 2025 ALAIN Pronostics Sportifs. Tous droits réservés.</p>
+        <p>
+            Les jeux d'argent et de hasard sont strictement interdits aux mineurs. Jouer comporte des risques : endettement, isolement, dépendance. Pour être aidé, appelez le 09 74 75 13 13 (appel non surtaxé).
+        </p>
+        <p>
+            <a href="https://otieu.com/4/10242902" rel="noopener noreferrer">Mentions Légales</a> | 
+            <a href="https://otieu.com/4/10252785" rel="noopener noreferrer">Conditions Générales de Vente</a> |
+            <a href="https://wa.link/n8v02y" rel="noopener noreferrer">Contact</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script>
+    
+    // Ajout d'attributs de données aux cartes de match (si ce n'est pas déjà fait dans le HTML)
+    // S'assurer que chaque .match-card a data-confidence (ex: 70.00) et data-odd (ex: 1.60)
+    
+    /**
+     * NOUVELLE FONCTION : Gère l'affichage/masquage des détails de pronostic.
+     * @param {HTMLElement} buttonElement Le bouton de révélation cliqué.
+     */
+    function showPrediction(buttonElement) {
+        // Trouve le conteneur parent (match-card)
+        const matchCard = buttonElement.closest('.match-card');
+        // Trouve le contenu masqué (prediction-hidden) à l'intérieur de la carte
+        const predictionContent = matchCard.querySelector('.prediction-hidden');
+
+        // Toggle l'affichage
+        if (predictionContent.style.display === 'flex') {
+            // Masquer la prédiction et réafficher le bouton
+            predictionContent.style.display = 'none';
+            buttonElement.textContent = 'Cliquer pour voir le Pronostic';
+            buttonElement.style.animation = 'pulseButton 2s infinite'; // Réactiver l'animation
+        } else {
+            // Afficher la prédiction et masquer le bouton
+            predictionContent.style.display = 'flex'; 
+            buttonElement.textContent = 'Masquer le Pronostic'; // Texte du bouton après le clic
+            buttonElement.style.animation = 'none'; // Arrêter l'animation une fois cliqué
+        }
+    }
+
+    /**
+     * Gère l'affichage/masquage du contenu gratuit et améliore l'accessibilité.
+     * @param {Event} event L'événement de clic
+     */
+    function toggleFreeTips(event) {
+        event.preventDefault(); 
+        var tipsContent = document.getElementById('free-tips-content');
+        var selector = event.currentTarget;
+
+        if (tipsContent.style.display === 'none' || tipsContent.style.display === '') {
+            tipsContent.style.display = 'block';
+            selector.setAttribute('aria-expanded', 'true');
+        } else {
+            tipsContent.style.display = 'none';
+            selector.setAttribute('aria-expanded', 'false');
+        }
+    }
+    
+    /**
+     * NOUVELLE FONCTIONNALITÉ: TRI DES MATCHS.
+     */
+    function sortMatches() {
+        const sortValue = document.getElementById('sort-control').value;
+        const matchList = document.getElementById('match-list');
+        const matches = Array.from(matchList.querySelectorAll('.match-card'));
+
+        matches.sort((a, b) => {
+            if (sortValue === 'confidence_desc') {
+                const confA = parseFloat(a.getAttribute('data-confidence'));
+                const confB = parseFloat(b.getAttribute('data-confidence'));
+                return confB - confA; // Tri par Confiance (décroissant)
+            } else if (sortValue === 'odd_asc') {
+                const oddA = parseFloat(a.getAttribute('data-odd'));
+                const oddB = parseFloat(b.getAttribute('data-odd'));
+                return oddA - oddB; // Tri par Cote (croissante)
+            } 
+            // 'default' ou autres valeurs non gérées: pas de changement d'ordre, 
+            // ou ordre basé sur la position initiale après le filtrage si appliqué.
+            // On peut aussi trier par un attribut "data-order" si on veut revenir à l'ordre initial du HTML, mais on s'en tient ici à "default" = pas de tri forcé.
+            return 0; 
+        });
+
+        // Réapplique les matchs triés au DOM
+        matches.forEach(card => matchList.appendChild(card));
+        
+        // Maintient le filtre actuel après le tri
+        filterMatches(); 
+    }
+    
+    // FONCTIONNALITÉ: FILTRE DE LIGUES (Peuple le select)
+    function populateLeagueFilter() {
+        const filter = document.getElementById('league-filter');
+        const matches = document.querySelectorAll('.match-card');
+        const leagues = new Set();
+        
+        matches.forEach(card => {
+            const league = card.getAttribute('data-league');
+            if (league) {
+                leagues.add(league);
+            }
+        });
+        
+        // Ajoute les options uniques au filtre
+        leagues.forEach(league => {
+            const option = document.createElement('option');
+            option.value = league;
+            option.textContent = league;
+            filter.appendChild(option);
+        });
+    }
+
+    // FONCTIONNALITÉ: FILTRAGE DES MATCHS
+    function filterMatches() {
+        const selectedLeague = document.getElementById('league-filter').value;
+        const matches = document.querySelectorAll('.match-card');
+        
+        matches.forEach(card => {
+            const league = card.getAttribute('data-league');
+            
+            if (selectedLeague === 'all' || league === selectedLeague) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+    
+    // S'exécute après le chargement du DOM
+    document.addEventListener('DOMContentLoaded', (event) => {
+        populateLeagueFilter(); // Initialise le filtre de ligues
+        // Pas besoin de sortMatches ici si 'default' n'applique pas de tri initial
+    });
+    
+    // Configuration Particles.js (inchangée)
+    window.onload = function() {
+        if (typeof particlesJS !== 'undefined') {
+            particlesJS("particles-js", {
+              "particles": {
+                "number": {
+                  "value": 60, 
+                  "density": {
+                    "enable": true,
+                    "value_area": 900 
+                  }
+                },
+                "color": {
+                  "value": "#ffffff" 
+                },
+                "shape": {
+                  "type": "circle",
+                  "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                  },
+                  "polygon": {
+                    "nb_sides": 5
+                  }
+                },
+                "opacity": {
+                  "value": 0.5,
+                  "random": true, 
+                  "anim": {
+                    "enable": true,
+                    "speed": 0.5, 
+                    "opacity_min": 0.1,
+                    "sync": false
+                  }
+                },
+                "size": {
+                  "value": 3,
+                  "random": true,
+                  "anim": {
+                    "enable": false, 
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                  }
+                },
+                "line_linked": {
+                  "enable": true,
+                  "distance": 150,
+                  "color": "#3a3a50", 
+                  "opacity": 0.4,    
+                  "width": 1
+                },
+                "move": {
+                  "enable": true,
+                  "speed": 1.5, 
+                  "direction": "none",
+                  "random": true, 
+                  "straight": false,
+                  "out_mode": "out",
+                  "bounce": false,
+                  "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                  }
+                }
+              },
+              "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                  "onhover": {
+                    "enable": true,
+                    "mode": "repulse" 
+                  },
+                  "onclick": {
+                    "enable": true,
+                    "mode": "push" 
+                  },
+                  "resize": true
+                },
+                "modes": {
+                  "grab": {
+                    "distance": 200, 
+                    "line_linked": {
+                      "opacity": 1
+                    }
+                  },
+                  "bubble": {
+                    "distance": 200, 
+                    "size": 20,     
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                  },
+                  "repulse": {
+                    "distance": 100, 
+                    "duration": 0.4
+                  },
+                  "push": {
+                    "particles_nb": 4
+                  },
+                  "remove": {
+                    "particles_nb": 2
+                  }
+                }
+              },
+              "retina_detect": true
+            });
+        }
+    };
+    </script>
+</body>
+</html>
