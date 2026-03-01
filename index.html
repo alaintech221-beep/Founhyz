@@ -15,8 +15,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" media="all">
     <style>
+        * {
+            -webkit-tap-highlight-color: transparent; /* Suppression du flash bleu au clic */
+        }
+
         /* BASE & TYPOGRAPHIE */
         body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard - Blocage de la sélection de texte */
             font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #0d111c; 
             color: #ffffff;
@@ -491,7 +499,7 @@
         /* --- FIN FOOTER CSS --- */
     </style>
 </head>
-<body>
+<body oncontextmenu="return false;" oncopy="return false;" oncut="return false;" onpaste="return false;" onselectstart="return false;">
 
     <div id="particles-js"></div>
 
@@ -556,126 +564,26 @@
             
             <section class="today-section" id="match-list">
                 
-                <div class="match-card" data-league="Premier League" data-confidence="70.00" data-odd="1.58">
-                    <div class="match-card-header">
-                        <div class="league-name">Premier League</div>
-                        </div>
-                    <div class="match-time">📅 24 janvier 2026 (Heure à confirmer)</div>
-                    <div class="teams-row">
-                        <div class="team">
-                            <div class="team-logo-container">
-                                <img src="https://i.ibb.co/FLPfNTYR/alba-img-6972a05270cab.png" alt="Logo Fulham" class="team-logo" width="45" height="45">
-                            </div>
-                            <div class="team-name">Fulham</div>
-                        </div>
-                        <div class="vs-text">️VS</div>
-                        <div class="team">
-                            <div class="team-logo-container">
-                                <img src="https://i.ibb.co/5hqYtG7L/alba-img-6972a05471644.png" alt="Logo Brighton" class="team-logo" width="45" height="45">
-                            </div>
-                            <div class="team-name">Brighton</div>
-                        </div>
-                    </div>
-                    <button class="prediction-reveal-button" onclick="showPrediction(this)">Cliquer pour voir le Pronostic</button>
-                    <div class="prediction-hidden">
-                        <div class="prediction-info">
-                            <div class="prediction-content-main">
-                                <div class="prediction-tag">Les 2 marquent (Oui)</div>
-                            </div>
-                            <div class="prediction-stats-footer">
-                                <div class="odd-badge">Cote : 1.58</div>
-                                <div class="percentage-badge">Confiance : 70.00 %</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
                 
-                <div class="match-card high-confidence" data-league="Premier League" data-confidence="85.00" data-odd="1.302">
+                <div class="match-card high-confidence" data-league="Premier League" data-confidence="74.00" data-odd="1.302">
                     <div class="match-card-header">
-                        <div class="league-name">Premier League</div>
+                        <div class="league-name">Serie A</div>
                         </div>
-                    <div class="match-time">📅 24 janvier 2026 - 17:30</div>
+                    <div class="match-time">📅 01 Mars 2026 - 19:45</div>
                     <div class="teams-row">
                         <div class="team">
                             <div class="team-logo-container">
-                                <img src="https://i.ibb.co/B5XrTThL/alba-img-6972a02ca605f.png" alt="Logo Bournemouth" class="team-logo" width="45" height="45">
+                                <img src="https://i.ibb.co/HL5N4KGD/225.png" alt="Logo Bournemouth" class="team-logo" width="45" height="45">
                             </div>
-                            <div class="team-name">Bournemouth</div>
+                            <div class="team-name">Roma</div>
                         </div>
                         <div class="vs-text">️VS</div>
                         <div class="team">
                             <div class="team-logo-container">
-                                <img src="https://i.ibb.co/bMKM8xwx/alba-img-6972a02f1056c.png" alt="Logo Liverpool" class="team-logo" width="45" height="45">
+                                <img src="https://i.ibb.co/KxBpYVhC/226.png" alt="Logo Liverpool" class="team-logo" width="45" height="45">
                             </div>
-                            <div class="team-name">Liverpool</div>
-                        </div>
-                    </div>
-                    <button class="prediction-reveal-button" onclick="showPrediction(this)">Cliquer pour voir le Pronostic</button>
-                    <div class="prediction-hidden">
-                        <div class="prediction-info">
-                            <div class="prediction-content-main">
-                                <div class="prediction-tag">Double Chance 2X</div>
-                            </div>
-                            <div class="prediction-stats-footer">
-                                <div class="odd-badge">Cote : 1.302</div>
-                                <div class="percentage-badge">Confiance : 85.00 %</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="match-card high-confidence" data-league="La Liga" data-confidence="82.00" data-odd="1.334">
-                    <div class="match-card-header">
-                        <div class="league-name">La Liga</div>
-                        </div>
-                    <div class="match-time">📅 24 janvier 2026 - 20:00</div>
-                    <div class="teams-row">
-                        <div class="team">
-                            <div class="team-logo-container">
-                                <img src="https://i.ibb.co/JJ1K13f/alba-img-69729f5c24add.png" alt="Logo Villarreal" class="team-logo" width="45" height="45">
-                            </div>
-                            <div class="team-name">Villarreal</div>
-                        </div>
-                        <div class="vs-text">️VS</div>
-                        <div class="team">
-                            <div class="team-logo-container">
-                                <img src="https://i.ibb.co/Ldy1yWWN/alba-img-69729f5c2c9a5.png" alt="Logo Real Madrid" class="team-logo" width="45" height="45">
-                            </div>
-                            <div class="team-name">Real Madrid</div>
-                        </div>
-                    </div>
-                    <button class="prediction-reveal-button" onclick="showPrediction(this)">Cliquer pour voir le Pronostic</button>
-                    <div class="prediction-hidden">
-                        <div class="prediction-info">
-                            <div class="prediction-content-main">
-                                <div class="prediction-tag">Double Chance 2X</div>
-                            </div>
-                            <div class="prediction-stats-footer">
-                                <div class="odd-badge">Cote : 1.334</div>
-                                <div class="percentage-badge">Confiance : 82.00 %</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                 <div class="match-card high-confidence" data-league="Ligue 1" data-confidence="82.00" data-odd="1.332">
-                    <div class="match-card-header">
-                        <div class="league-name">Ligue 1</div>
-                        </div>
-                    <div class="match-time">📅 24 janvier 2026 - 20:05</div>
-                    <div class="teams-row">
-                        <div class="team">
-                            <div class="team-logo-container">
-                                <img src="https://i.ibb.co/hRJ2XQHB/alba-img-69729f6fd77af.png" alt="Logo Marseille" class="team-logo" width="45" height="45">
-                            </div>
-                            <div class="team-name">Olympique de Marseille</div>
-                        </div>
-                        <div class="vs-text">VS</div>
-                        <div class="team">
-                            <div class="team-logo-container">
-                                <img src="https://i.ibb.co/LzTvsLbc/alba-img-69729f7031179.png" alt="Logo Lens" class="team-logo" width="45" height="45">
-                            </div>
-                            <div class="team-name">RC Lens</div>
+                            <div class="team-name">Juventus</div>
                         </div>
                     </div>
                     <button class="prediction-reveal-button" onclick="showPrediction(this)">Cliquer pour voir le Pronostic</button>
@@ -685,7 +593,75 @@
                                 <div class="prediction-tag">Double Chance 1X</div>
                             </div>
                             <div class="prediction-stats-footer">
-                                <div class="odd-badge">Cote : 1.332</div>
+                                <div class="odd-badge">Cote : 1.45</div>
+                                <div class="percentage-badge">Confiance : 74.00 %</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="match-card high-confidence" data-league="La Liga" data-confidence="88.00" data-odd="1.45">
+                    <div class="match-card-header">
+                        <div class="league-name">Turkey Super League </div>
+                        </div>
+                    <div class="match-time">📅 01 Mars 2026 - 17:00</div>
+                    <div class="teams-row">
+                        <div class="team">
+                            <div class="team-logo-container">
+                                <img src="https://i.ibb.co/MxkFczCd/t-l-chargement-12.png" alt="Logo Villarreal" class="team-logo" width="45" height="45">
+                            </div>
+                            <div class="team-name">Antalyaspor</div>
+                        </div>
+                        <div class="vs-text">️VS</div>
+                        <div class="team">
+                            <div class="team-logo-container">
+                                <img src="https://i.ibb.co/k2t3Cj1G/t-l-chargement-13.png" alt="Logo Real Madrid" class="team-logo" width="45" height="45">
+                            </div>
+                            <div class="team-name">Fenerbahçe</div>
+                        </div>
+                    </div>
+                    <button class="prediction-reveal-button" onclick="showPrediction(this)">Cliquer pour voir le Pronostic</button>
+                    <div class="prediction-hidden">
+                        <div class="prediction-info">
+                            <div class="prediction-content-main">
+                                <div class="prediction-tag">Total +1.5</div>
+                            </div>
+                            <div class="prediction-stats-footer">
+                                <div class="odd-badge">Cote : 1.30</div>
+                                <div class="percentage-badge">Confiance : 88.00 %</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="match-card high-confidence" data-league="Ligue 1" data-confidence="82.00" data-odd="1.30">
+                    <div class="match-card-header">
+                        <div class="league-name">Premier League</div>
+                        </div>
+                    <div class="match-time">📅 01 Mars 2026 - 16:30</div>
+                    <div class="teams-row">
+                        <div class="team">
+                            <div class="team-logo-container">
+                                <img src="https://i.ibb.co/S4f2qQ92/t-l-chargement-14.png" alt="Logo Marseille" class="team-logo" width="45" height="45">
+                            </div>
+                            <div class="team-name">Arsenal</div>
+                        </div>
+                        <div class="vs-text">VS</div>
+                        <div class="team">
+                            <div class="team-logo-container">
+                                <img src="https://i.ibb.co/CkcH4LF/t-l-chargement-15.png" alt="Logo Lens" class="team-logo" width="45" height="45">
+                            </div>
+                            <div class="team-name">Chelsea</div>
+                        </div>
+                    </div>
+                    <button class="prediction-reveal-button" onclick="showPrediction(this)">Cliquer pour voir le Pronostic</button>
+                    <div class="prediction-hidden">
+                        <div class="prediction-info">
+                            <div class="prediction-content-main">
+                                <div class="prediction-tag">Total +1.5</div>
+                            </div>
+                            <div class="prediction-stats-footer">
+                                <div class="odd-badge">Cote : 1.30</div>
                                 <div class="percentage-badge">Confiance : 82.00 %</div>
                             </div>
                         </div>
@@ -964,4 +940,4 @@
     };
     </script>
 </body>
-</html>
+    </html>
